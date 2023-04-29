@@ -3,6 +3,13 @@ import java.util.Date;
 
 public class UserBean {
 
+	/**
+	 * 
+	 */
+	public UserBean() {
+		// TODO Auto-generated constructor stub
+	}
+
 	int idUser;
 	String firstName;
 	String lastName;

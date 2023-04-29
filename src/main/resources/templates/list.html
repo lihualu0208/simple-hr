@@ -25,11 +25,11 @@
           <tr th:each="user : ${users}">
             <th scope="row" th:text="${user.idUser}"></th>
             <td th:text="${user.firstName} + ' ' + ${user.lastName}"></td>
-            <td> hello</td>
-            <td>@twitter</td>
-            <td><a>Update</a></td>
-            <td><a>Delete</a></td>
-          </tr>
+            <td th:text="${#strings.toUpperCase(user.username)} "></td>
+            <td th:text="${#dates.format(user.birth, 'dd-MM-yyyy')}"></td>
+            <td><a th:href="@{/update/} + ${user.idUser}" >Update</a></td>
+            <td><a th:href="@{/delete/} + ${user.idUser}">Delete</a></td>
+          </tr> 
         </tbody>
       </table>    
     </div>

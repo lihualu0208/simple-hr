@@ -19,6 +19,25 @@ public class SimplehrService {
 		
 		return users;
 	}
+	
+	public  void createUsers(UserBean user) {
+		
+		this.simplehrDao.createUser(user);
+	}
 
+	public  void updateUsers(UserBean user) {
+		this.simplehrDao.updateUser(user);
+	}
+	
+	public UserBean findUser(int id) {
+		
+		
+		return this.simplehrDao.findUser(id);
+	}
+      public void deleteUser(int id) {
+		
+		
+		 this.simplehrDao.deleteUser(id);
+	}
 
 }
